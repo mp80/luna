@@ -12,6 +12,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
         @livewireStyles
 
@@ -19,7 +21,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <x-jet-banner />
+        <x-jet-banner/>
 
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
@@ -31,9 +33,9 @@
                         {{ $header }}
                     </div>
                 </header>
-            @endif
+        @endif
 
-            <!-- Page Content -->
+        <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
@@ -42,5 +44,9 @@
         @stack('modals')
 
         @livewireScripts
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
     </body>
 </html>
