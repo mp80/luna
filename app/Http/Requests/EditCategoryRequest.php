@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreCategoryRequest extends FormRequest
+final class EditCategoryRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -14,14 +16,14 @@ class StoreCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category_name' => 'required|unique:categories|max:255',
+            'id' => 'required|string',
         ];
     }
 
     public function messages(): array
     {
         return [
-            'category_name.required' => 'You must add a category',
+            'id.required' => 'ID must be a int',
         ];
     }
 }

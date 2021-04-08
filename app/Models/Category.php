@@ -20,6 +20,7 @@ final class Category extends Model
     protected $fillable = [
         'user_id',
         'category_name',
+        'id'
     ];
 
     public function user(): HasOne
